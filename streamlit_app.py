@@ -105,15 +105,15 @@ if st.session_state['active_section'] == 'Home':
             with st.spinner('Converting Template...'):
                 Clover_code.run_first_step(st.session_state['uploaded_file'])
             with st.spinner('Generating Recipes...'):
-                st.session_state['final_recipes'] =main.run_recipes_on_clover('AIO_Converted.xlsx')
+                st.session_state['final_recipes'] =main.run_recipes_on_clover('Mijos Menu AIO.xlsx')
             # Message and spinner will automatically disappear once the function execution completes
             st.success('Processing complete!')
 
         # Check if the file has been processed and exists
         if 'final_recipes' in st.session_state and os.path.exists(st.session_state['final_recipes']):
             # File exists, create a download button
-            zip_filename = "AioCombined.zip"
-            create_zip(st.session_state['final_recipes'], "AIO_Converted.xlsx", zip_filename)  # Generate the zip
+            zip_filename = "Mijos Menu & Recipe.zip"
+            create_zip(st.session_state['final_recipes'], "Mijos Menu AIO.xlsx", zip_filename)  # Generate the zip
 
             # Now use st.download_button with the zip file:
             with open(zip_filename, "rb") as zip_file:

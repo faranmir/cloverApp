@@ -2,7 +2,7 @@ import openpyxl
 from data import main
 import pandas as pd
 import random
-
+import os
 def print(*args,**kwargs):
     return None
 
@@ -72,8 +72,9 @@ def run_recipes_on_clover(items_file_path):
 
     recipe_sheets_1 = get_sheet_names(database_recipe_1_sheet_path)
     drinks_sheets = get_sheet_names(database_drinks_sheet_path)
-
-    final_recipies = f"Mijo's_Recipe{random.randint(1000,99999)}.xlsx"
+    if os.path.exists("Mijos Recipes.xlsx"):
+        os.remove("Mijos Recipes.xlsx")
+    final_recipies = "Mijos Recipes.xlsx"
 
     for item in all_items:
         found = False

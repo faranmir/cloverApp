@@ -68,7 +68,7 @@ def run_first_step(input_file_path):
     out_sheets['Modifier Option'].drop_duplicates('optionName', inplace=True)
     out_sheets['Modifier Option']['id'] = range(1, 1+len(out_sheets['Modifier Option']))
 
-    save_all_sheets('AIO_Converted.xlsx', out_sheets)
+    save_all_sheets('Mijos Menu AIO.xlsx', out_sheets)
 
 
     def generate_unique_ids(df):
@@ -104,12 +104,12 @@ def run_first_step(input_file_path):
     excel_file_path = 'output_with_ids_1.xlsx'
     sheet_name = 'Sheet1'
     df = pd.read_excel(excel_file_path, sheet_name=sheet_name, engine='openpyxl')
-    menu_df_output = pd.read_excel('AIO_Converted.xlsx','Modifier ModifierOptions')
+    menu_df_output = pd.read_excel('Mijos Menu AIO.xlsx','Modifier ModifierOptions')
     menu_df_output = menu_df_output.reindex(df.index)
     menu_df_output["modifierId"]=df["Modifier Group ID"]
     menu_df_output["modifierOptionId"]=df["Modifier ID"]
 
-    with pd.ExcelWriter('AIO_Converted.xlsx', engine='openpyxl', mode='a', if_sheet_exists='replace') as w:
+    with pd.ExcelWriter('Mijos Menu AIO.xlsx', engine='openpyxl', mode='a', if_sheet_exists='replace') as w:
         menu_df_output.to_excel(w, sheet_name='Modifier ModifierOptions', index=False)
 
 
@@ -148,7 +148,7 @@ def run_first_step(input_file_path):
     excel_file_path = 'output_file_path.xlsx'
     sheet_name = 'Items'
     df = pd.read_excel(excel_file_path, sheet_name=sheet_name, engine='openpyxl')
-    menu_df_output = pd.read_excel('AIO_Converted.xlsx','Item Modifiers')
+    menu_df_output = pd.read_excel('Mijos Menu AIO.xlsx','Item Modifiers')
     menu_df_output = menu_df_output.reindex(df.index)
     menu_df_output["itemId"]=df["Item Id"]
     menu_df_output["modifierId"]=df["Modifier Group Id"]
