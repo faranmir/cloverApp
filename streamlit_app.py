@@ -28,6 +28,9 @@ import employee
 
 
 # add_bg_from_local()
+
+st.set_page_config(page_title="AIO App")
+
 col1,col2,col3=st.columns(3)
 with col2:
     st.image('logo.png',width=300)
@@ -86,7 +89,7 @@ if 'active_section' not in st.session_state:
 if st.session_state['active_section'] == 'Home':
     _,column2,_=st.columns([0.1,0.8,0.1])
     with column2:
-        st.title('Clover To AIO Converter 📁')
+        st.title('Clover to AIO Converter 📁')
 
     # File uploader allows user to add file
 
