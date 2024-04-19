@@ -28,7 +28,6 @@ import employee
 
 
 # add_bg_from_local()
-
 col1,col2,col3=st.columns(3)
 with col2:
     st.image('logo.png',width=300)
@@ -55,7 +54,7 @@ def create_sidebar():
 
 
 
-st.sidebar.title('******* Navigate To *******')
+st.sidebar.title('Navigation')
 
 def create_zip(file1_path, file2_path, zip_filename):
 
@@ -117,7 +116,7 @@ if st.session_state['active_section'] == 'Home':
                     data=zip_file,
                     file_name=zip_filename
                 )
-                if st.button('Upload to Server'):
+                if st.button('Upload to AIO Dashboard'):
                     # Display a progress bar
                     progress = st.progress(0)
                     current_progress = 0
@@ -142,7 +141,7 @@ if st.session_state['active_section'] == 'Home':
 
 
 if st.session_state['active_section'] == 'employee':
-    st.title('AIO Employee Converter 🤵')
+    st.title('Toast to AIO Converter 🔶')
 
     # File uploader allows user to add file
 
