@@ -54,7 +54,12 @@ def create_sidebar():
 
 
 
-st.sidebar.title('Navigation')
+st.sidebar.markdown("""
+    <style>
+        .css-1y0tads {justify-content: center;}
+    </style>
+    <h1 style='text-align: center;'>Navigation</h1>
+    """, unsafe_allow_html=True)
 
 def create_zip(file1_path, file2_path, zip_filename):
 
@@ -79,7 +84,9 @@ if 'active_section' not in st.session_state:
 
 
 if st.session_state['active_section'] == 'Home':
-    st.title('Clover To AIO Converter 📁')
+    _,column2,_=st.columns([0.1,0.8,0.1])
+    with column2:
+        st.title('Clover To AIO Converter 📁')
 
     # File uploader allows user to add file
 
@@ -90,10 +97,6 @@ if st.session_state['active_section'] == 'Home':
             st.session_state['uploaded_file'] = uploaded_file
         
     if 'uploaded_file' in st.session_state:
-        st.empty()
-        st.empty()
-        st.empty()
-        st.empty()
         # File is in session state, process the file
         if 'final_recipes' not in st.session_state:
             with st.spinner('Converting Template...'):
@@ -141,7 +144,9 @@ if st.session_state['active_section'] == 'Home':
 
 
 if st.session_state['active_section'] == 'employee':
-    st.title('Toast to AIO Converter 🔶')
+    _,column2,_=st.columns([0.1,0.8,0.1])
+    with column2:
+        st.title('Toast to AIO Converter 🔶')
 
     # File uploader allows user to add file
 
