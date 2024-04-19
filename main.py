@@ -73,7 +73,7 @@ def run_recipes_on_clover(items_file_path):
     recipe_sheets_1 = get_sheet_names(database_recipe_1_sheet_path)
     drinks_sheets = get_sheet_names(database_drinks_sheet_path)
 
-    final_recipies = f"Moji's_Recipe{random.randint(1000,99999)}.xlsx"
+    final_recipies = f"Mijo's_Recipe{random.randint(1000,99999)}.xlsx"
 
     for item in all_items:
         found = False
