@@ -3,6 +3,10 @@ from data import main
 import pandas as pd
 import random
 
+def print(*args,**kwargs):
+    return None
+
+
 def get_item_names(file_path):
     try:
         excel_data = pd.read_excel(file_path, sheet_name="Item")

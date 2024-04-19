@@ -2,6 +2,9 @@ import pandas as pd
 import os
 import numpy as np
 
+def print(*args,**kwargs):
+    return None
+
 def run_first_step(input_file_path):
     def get_all_sheets(file_name):
         df_dict = dict()

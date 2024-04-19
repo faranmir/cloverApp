@@ -2,6 +2,8 @@ import os
 import pandas as pd
 import openpyxl
 
+def print(*args,**kwargs):
+    return None
 
 def read_excel_to_dataframe(item_name, filename, sheet_name):
     try:

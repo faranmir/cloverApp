@@ -1,5 +1,6 @@
 import pandas as pd
-
+def print(*args,**kwargs):
+    return None
 
 
 def run_employee(file_path):
