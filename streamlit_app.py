@@ -140,8 +140,15 @@ if st.session_state['active_section'] == 'Home':
                     url = 'https://main-dashboard.dev.aioapp.com/'
                     link_text = 'Go To Dashboard'
 
+                    view_Online = 'View Online'
+                    view_online_url = 'https://portal.dev.aioapp.com/online-ordering/28'
                     # Display the link
-                    st.markdown(f'<a href="{url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
+                    st.markdown(
+                        f'<a href="{url}" target="_blank">{link_text}</a>'
+                        f'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+                        f'<a href="{view_online_url}" target="_blank">{view_Online}</a>',
+                        unsafe_allow_html=True
+                    )
             # with open(st.session_state['final_recipes'], "rb") as file:
                 
 
