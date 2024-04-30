@@ -137,11 +137,11 @@ if st.session_state['active_section'] == 'Home':
                     
                     # Display success message once the loop is complete
                     st.success('Uploaded successfully!')
-                    url = 'https://main-dashboard.dev.aioapp.com/'
+                    url = 'https://uatv2-dashboard.dev.aioapp.com/'
                     link_text = 'Go To Dashboard'
 
                     view_Online = 'View Online'
-                    view_online_url = 'https://portal.dev.aioapp.com/online-ordering/28'
+                    view_online_url = 'https://uatv2-portal.dev.aioapp.com/online-ordering/4'
                     # Display the link
                     st.markdown(
                         f'<a href="{url}" target="_blank">{link_text}</a>'
