@@ -137,7 +137,7 @@ if st.session_state['active_section'] == 'Home':
                     
                     # Display success message once the loop is complete
                     st.success('Uploaded successfully!')
-                    url = 'https://uatv2-dashboard.dev.aioapp.com/'
+                    url = 'https://stagev2-dashboard.dev.aioapp.com/'
                     link_text = 'Go To Dashboard'
 
                     view_Online = 'View Online'
